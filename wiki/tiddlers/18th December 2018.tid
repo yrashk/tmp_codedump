@@ -1,0 +1,50 @@
+created: 20181218044116246
+modified: 20181218053838361
+tags: Journal
+title: 18th December 2018
+type: text/vnd.tiddlywiki
+
+! Hello, Seclet!
+
+This story began a year or so ago when I ordered [[OnlyKey Color|https://onlykey.io/]] but the experience wasn't exactly smooth -- the touch keys were randomly stopping to work and the experience was rather crude and not highly intuitive. The keys were the buzz killer for sure. This frustration led to more thinking. 
+
+<center>
+[img height=100 [ok-new_1024x1024_2x_1024x1024_2x_baebaf21-bc28-4d24-9645-84b641614674_1024x1024@2x.jpg]]
+</center>
+
+I am by no means a security professional, but I had a feeling that this device operational requirements aren't best for me.
+
+For example, the device is meant to be plugged into USB to act as a keyboard. This means that it is easy to forget it in your computer and walk away while it's still authorized.
+
+Because of the device's constraints, its capabilities in terms of authentication are rather limited -- you can enter limited numeric PIN codes on the board. In plain sight no less (otherwise you need to hide it from surveillance and that might make entering the code weirder and harder).
+
+So I had a spark of a thought in the back of my mind -- maybe I can do better? I mean, I know next nothing about electronics or security. But sure it'll be a fun project?
+
+I remember strolling around Stavanger's trails with my mom and talking about this random idea and through a lot of reasoning I arrived at this:
+
+
+<<<
+It should be a bracelet (or even a smartwatch?) type of form factor that works as a Bluetooth keyboard.
+<<<
+
+I started doing some research and somehow found myself exploring [[NXP i.MX RT crossover series|https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/i.mx-applications-processors/i.mx-rt-series:IMX-RT-SERIES]]. I even managed to order an [[evaluation kit|https://www.nxp.com/support/developer-resources/run-time-software/i.mx-developer-resources/i.mx-rt1050-evaluation-kit:MIMXRT1050-EVK]]:
+
+[img[MIMXRT1050-EVK-DEVICE.jpg]]
+
+This stuff is quite interesting, has a lot of stuff, good performance, etc. But, frankly, it's a bit overwhelming for a newbie. So I didn't get far. I also needed more modules for connectivity. My electronics skills are at such a naive level that I am embarrassed to even discuss them.
+
+Time flew by.
+
+A week or two ago I was shopping for some Arduino/Raspberry Pi components at a shop in Bangkok (I still wanted to learn more) and I ran into Joe from [[GoGoTech|https://gogotech.co/]] and we chatted over a few occasions. Along many other helpful pointers (thank you, Joe!) he nudged me to look at [[ESP32|https://en.wikipedia.org/wiki/ESP32]] (and even gave one to try!)
+
+[img[9eb5.jpg]]
+
+At a very low price (less than $5 per chip) it offers two 32-bit cores, some memory and Bluetooth/WiFi connectivity and that is in less than 1cm x 1cm. Not to mention some crypto accelerators and such. Wow.
+
+The only immediate downside I saw was that it didn't seemingly had LLVM/Rust support yet so I'd have to program it in C. Ugh, I guess sometimes that's a necessary sacrifice. And a challenge.
+
+So I thought it'd be a good idea to try this route and finally make the idea work at least as a crude prototype and learn a lot of new things on the way. And, to make it more useful -- document the process. How does one with solid software engineering background but none on the electronics/embedded/security would learn to build a device like this? Just how wrong can things go?
+
+So the only thing that was missing was the name. That wasn't too hard. While I was helping my wife to hang the laundry, it came to me as a combination of "bracelet" and "secret": ''Seclet''.
+
+There we go!
