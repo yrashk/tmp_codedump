@@ -96,8 +96,8 @@ let idf = pkgs.stdenv.mkDerivation {
   name = "idf";
   src = pkgs.fetchgit {
       url = "https://github.com/espressif/esp-idf";
-      rev = "v3.0.7";
-      sha256 = "0mffz3pnnag1aj3prgcdvsfm5iinbkjwrd8xv62yz54a7pd16w17";
+      rev = "v3.3-beta1";
+      sha256 = "1i5723ilwr3r7mawd8w0g897sml3d447308pfyjhg7x1am2ayvfp";
       fetchSubmodules = true;
       leaveDotGit = true;
     };
